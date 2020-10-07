@@ -1,5 +1,6 @@
 function makeTaskForm(){
     let form = document.createElement('form');
+    form.classList.add('taskForm');
     
     let title = document.createElement('input');
     title.classList.add('title');
