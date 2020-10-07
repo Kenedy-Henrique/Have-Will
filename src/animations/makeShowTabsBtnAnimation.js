@@ -1,7 +1,7 @@
 function makeShowTabsBtnAnimation(isShow, tabsContainer){
     if(!isShow){
         tabsContainer.animate([
-          { right: '40px'},
+          { right: '3%'},
           { right: '310px'}
         ], {
           duration: 800,
@@ -10,7 +10,7 @@ function makeShowTabsBtnAnimation(isShow, tabsContainer){
       } else {
         tabsContainer.animate([
           { right: '310px'},
-          { right: '40px'}
+          { right: '3%'}
         ], {
           duration: 800,
           fill: "forwards"
