@@ -29,6 +29,8 @@ function renderTabsDivsFromLocalStorage(tabsObj, tabsContainer, currentTabObj, t
         delete tabsObj[key];
         tabsContainer.removeChild(tabDiv);
         localStorage.setItem('tabsObj', JSON.stringify(tabsObj));
+        currentTabPElement.innerHTML = 'Choose a tab';
+        currentTabObj.tabName = '';
     });
     buttonsOptions.appendChild(deleteTabBtn);
 

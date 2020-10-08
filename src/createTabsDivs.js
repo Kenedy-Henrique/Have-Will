@@ -28,6 +28,8 @@ function createTabsDivs(tabsObj, tabName, tabsContainer, currentTabObj, tasksCon
         delete tabsObj[tabName];
         tabsContainer.removeChild(tabDiv);
         localStorage.setItem('tabsObj', JSON.stringify(tabsObj));
+        currentTabPElement.innerHTML = 'Choose a tab';
+        currentTabObj.tabName = '';
     });
     buttonsOptions.appendChild(deleteTabBtn);
 
