@@ -1,0 +1,364 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body{
+	background-color: rgb(211, 211, 211);
+}
+
+.currentTabPElement {
+	font-size: 41px;
+	font-family: 'Playfair Display';
+	color: rgb(37, 39, 46);
+	position: absolute;
+	top: 20px;
+	text-align: center;
+	width: 100%;
+}
+.tasksContainer {
+	width: 90%;
+	height: auto;
+	position: absolute;
+	left: 5%;
+	top: 70px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 40px;
+}
+.tabsContainer {
+	height: 100%;
+	width: 270px;
+	background-color: rgb(37, 39, 46);
+	position: fixed;
+	right: -270px;
+	top: 0;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.showTabsBtn {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border: none;
+	position: fixed;
+	right: 3%;
+	top: 50px;
+	background-color: rgb(45, 46, 56);
+	color: rgb(211, 211, 211);
+	font-family: 'Playfair Display';
+	font-size: 16px;
+}
+.showTaskFormBtn {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border: none;
+	position: fixed;
+	left: 3%;
+	top: 50px;
+	background-color: rgb(45, 46, 56);
+	color: rgb(211, 211, 211);
+	font-family: 'Playfair Display';
+	font-size: 15px;
+}
+.makeTabBtn {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border: none;
+	position: fixed;
+	left: 3%;
+	top: 120px;
+	background-color: rgb(45, 46, 56);
+	color: rgb(211, 211, 211);
+	font-family: 'Playfair Display';
+	font-size: 16px;
+}
+
+/* TASK FORM BELOW */
+.taskForm {
+	width: 300px;
+    height: 400px;
+   	position: fixed;
+    background-color: rgb(37, 39, 46);
+	left: 50%;
+	top: 10vw;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	border-radius: 10px;
+}
+.title {
+	border: none;
+	width: 80%;
+	position: relative;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: rgb(211, 211, 211);
+}
+.description {
+	border: none;
+	width: 80%;
+	position: relative;
+	max-width: 80%;
+	min-width: 80%;
+	height: 30%;
+	min-height: 30%;
+	max-height: 30%;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: rgb(211, 211, 211);
+}
+.dueDate {
+	border: none;
+	width: 80%;
+	position: relative;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: rgb(211, 211, 211);
+}
+.priority {
+	height: 50px;
+	border: none;
+	position: relative;
+}
+select {
+	border: none;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: rgb(211, 211, 211);
+}
+.btnsOptions {
+	display: flex;
+	gap: 15px;
+}
+.resetBtn {
+	border: none;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: rgb(211, 211, 211);
+
+}
+.addTaskBtn {
+	border: none;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: rgb(211, 211, 211);
+}
+/* TASK FORM ABOVE */
+
+/* TAB FORM BELOW */
+.tabForm {
+	width: 300px;
+    height: 100px;
+   	position: fixed;
+    background-color: rgb(37, 39, 46);
+	left: 50%;
+	top: 10vw;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+	border-radius: 10px;
+}
+.tabName {
+	border: none;
+	width: 80%;
+	position: relative;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: rgb(211, 211, 211);
+}
+.addFormBtn {
+	border: none;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgba(0, 0, 0, 0.7);
+	background-color: rgb(211, 211, 211);
+}
+/* TAB FORM ABOVE*/
+
+/* TASK DIV BELOW */
+.taskDiv {
+	height: 310px;
+	width: 290px;
+	background-color: rgb(45, 46, 56);
+	position: relative;
+	box-shadow: 12px 12px 2px 1px rgba(45, 46, 46, .2);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+.taskDivTitle {
+	border: none;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgb(211, 211, 211);
+}
+.descriptionButton {
+	border: none;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgb(45, 46, 56);
+	background-color: rgb(211, 211, 211);
+	border: 0.1px solid rgb(211, 211, 211, .6);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 30px;
+}
+.descriptionButton:hover {
+	color: rgb(211, 211, 211);
+	background-color: rgb(45, 46, 56);
+}
+.taskDivDueDate {
+	border: none;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgb(211, 211, 211);
+}
+.divPriority {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	left: 25px;
+	top: 25px;
+}
+
+.deleteBtn {
+	border: none;
+	font-size: 20px;
+	font-family: 'Playfair Display';
+	border-radius: 4px;
+	color: rgb(45, 46, 56);
+	background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	right: 25px;
+	top: 20px;
+	background-image: url(./assets/trash-can.svg);
+	width: 40px;
+	height: 40px;
+}
+.deleteBtn:hover {
+	transform: scale(1.2);
+}
+/* TASK DIV ABOVE */
+
+/* TAB DIV BELOW */
+.tabDiv {
+	width: 100%;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	flex-direction: column;
+	border: solid 1px rgb(211, 211, 211);
+}
+.tabTitle {
+	font-family: 'Playfair Display';
+	font-size: 20px;
+	color: rgb(211, 211, 211);
+}
+.tabDivBtnOptions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	position: relative;
+	bottom: 3px;
+}
+.changeTabBtn {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url(./assets/change.svg);
+	height: 30px;
+	width: 30px;
+	position: relative;
+	top: 2px;
+}
+.changeTabBtn:hover {
+	transform: scale(1.2);
+}
+.deleteTabBtn {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: url(./assets/trash-can.svg);
+	height: 25px;
+	width: 25px;
+}
+.deleteTabBtn:hover {
+	transform: scale(1.2);
+}
+/* TAB DIV ABOVE*/
