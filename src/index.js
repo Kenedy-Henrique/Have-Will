@@ -50,7 +50,9 @@ showTaskFormBtn.addEventListener('click', () => {
         addTaskBtn = document.querySelector('.addTaskBtn');
         addTaskBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            if(currentTabObj.tabName === '' || currentTabObj.tabName === undefined){
+            if(addTaskForm.title.value === '' || addTaskForm.description.value === '' || addTaskForm.dueDate.value === '' || addTaskForm.priority.value === ''){
+                alert('Put all the informations!');
+            } else if(currentTabObj.tabName === '' || currentTabObj.tabName === undefined){
                 alert('Create and go to a tab!');
             } else {
                 taskObj = makeTaskObj(addTaskForm.title.value,
