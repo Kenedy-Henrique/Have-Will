@@ -1,3 +1,5 @@
+import showTaskDetails from './showTaskDetails';
+
 function createTaskDivs(tabsObj, currentTab, tasksContainer){
     for(let key in tabsObj[currentTab]){
         let taskDiv = document.createElement('div');
@@ -17,7 +19,7 @@ function createTaskDivs(tabsObj, currentTab, tasksContainer){
         description.classList.add('descriptionButton');
         description.innerHTML = 'Show details';
         description.addEventListener('click', () => {
-            alert(tabsObj[currentTab][key].description);
+            showTaskDetails(tabsObj[currentTab][key].description);
         })
         taskDiv.appendChild(description);
 
