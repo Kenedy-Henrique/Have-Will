@@ -91,8 +91,20 @@ body{
 	background-color: rgb(45, 46, 56);
 	color: rgb(211, 211, 211);
 	font-family: 'Playfair Display';
-	font-size: 16px;
+	font-size: 20px;
 }
+.showTabsBtn p {
+	position: absolute;
+	left: 4px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.showTabsBtn:hover {
+	background-color: rgb(211, 211, 211);
+	color: rgb(45, 46, 56);
+	border: 1px solid rgb(37, 39, 46);
+}
+
 .showTaskFormBtn {
 	height: 50px;
 	width: 50px;
@@ -104,8 +116,21 @@ body{
 	background-color: rgb(45, 46, 56);
 	color: rgb(211, 211, 211);
 	font-family: 'Playfair Display';
-	font-size: 15px;
+	font-size: 17.5px;
 }
+
+.showTaskFormBtn p {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.showTaskFormBtn:hover {
+	background-color: rgb(211, 211, 211);
+	color: rgb(45, 46, 56);
+	border: 1px solid rgb(37, 39, 46);
+}
+
 .makeTabBtn {
 	height: 50px;
 	width: 50px;
@@ -117,8 +142,20 @@ body{
 	background-color: rgb(45, 46, 56);
 	color: rgb(211, 211, 211);
 	font-family: 'Playfair Display';
-	font-size: 16px;
+	font-size: 19px;
 }
+.makeTabBtn p {
+	position: absolute;
+	left: 2px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.makeTabBtn:hover {
+	background-color: rgb(211, 211, 211);
+	color: rgb(45, 46, 56);
+	border: 1px solid rgb(37, 39, 46);
+}
+
 
 /* TASK FORM BELOW */
 .taskForm {
