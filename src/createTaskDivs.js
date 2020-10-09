@@ -34,6 +34,7 @@ function createTaskDivs(tabsObj, currentTab, tasksContainer){
         deleteBtn.addEventListener('click', () => {
             tasksContainer.removeChild(taskDiv);
             delete tabsObj[currentTab][key];
+            localStorage.setItem('tabsObj', JSON.stringify(tabsObj));
         })
 
         tasksContainer.appendChild(taskDiv);
